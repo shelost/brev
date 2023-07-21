@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Questrial|Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+    <div id = 'main'>
+
+        <img src = 'dollarpact.svg'>
+        <form id ='form' method='POST' action='https://script.google.com/macros/s/AKfycbwjjIXz1y8mAeGv0CTSawvyctFqITZ1nXTQjo318v8_Tp1Hjf4lq3RmqbOQmUAhKi7Q/exec'>
+
+            <label for='Email'> I promise to </label>
+            <input id = 'email' name = 'Email' type = 'email' placeholder = 'their@email.com' required></input>
+
+            <label for='Task'> that I will </label>
+            <input id = 'task' name = 'Task' type = 'text' placeholder = 'buy airplane tickets to Miami' required></input>
+
+            <label for='Date'> by </label>
+            <input id = 'date' name = 'Date' type = 'date' value = '2030-01-01' required></input>
+
+            <label for='Money'> or else pay </label>
+            <input id = 'money' name = 'Money' type = 'number' value = '5.00' step="0.01" required></input>
+
+            <button type = 'submit' onclick = 'submit'> Submit </button>
+
+        </form>
+    </div>
+
+</body>
+
+<script>
+
+    function Id(id){
+        return document.getElementById(id)
+    }
+
+    function submit(){
+
+        console.log('hello')
+
+        if (Id('money').value > 0){
+
+            console.log('yes')
+        }
+    }
+
+</script>
+
+<style>
+
+    img{
+        height: 150px;
+        margin-bottom: 30px;
+    }
+
+    #main{
+        font-family: Inter, sans-serif;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button{
+        background: #FF0970;
+        border: none;
+        color: white;
+        padding: 15px;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: 800;
+        font-weight: 600;
+        transition: 0.2s ease;
+        cursor: pointer;
+    }
+
+    button:hover{
+        background: #de005d;
+    }
+
+    #form{
+        display: flex;
+        flex-direction: column;
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+
+        border-radius: 20px;
+        background: #f5f4f4;
+        box-shadow:  20px 20px 60px rgba(0,0,0,0.1),
+             -20px -20px 60px rgba(255,255,255,0.5);
+    }
+
+    label{
+        margin-bottom: 10px;
+        letter-spacing: -0.5px;
+        font-size: 14px;
+    }
+
+    input{
+        margin-bottom: 25px;
+        padding: 15px;
+        background: rgb(0,0,0,0.05);
+        border: none;
+        border-radius: 10px;
+        width: 250px;
+        font-family: Inter, sans-serif;
+
+    }
+
+
+</style>
+</html>
